@@ -87,7 +87,7 @@
             plugins: {
                 title: {
                     display: true,
-                    text: 'Top 5 Pekerjaan Dengan Jumlah Pegawai Paling Banyak'
+                    text: 'Top 5 Pekerjaan dengan Jumlah Pegawai Paling Banyak'
                 }
             },
             scales: {
