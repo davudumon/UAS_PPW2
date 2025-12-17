@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('zayyan_540567_pekerjaan', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->text('deskripsi')->nullable();
-            $table->timestamps();
+        Schema::table('zayyan_540567_pegawai', function (Blueprint $table) {
+            $table->softDeletes();
         });
     }
 
@@ -24,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('zayyan_540567_pekerjaan');
+        Schema::table('zayyan_540567_pegawai', function (Blueprint $table) {
+            $table->dropSoftDeletes();
+        });
     }
 };
